@@ -13,7 +13,7 @@ class MinesweeperTest < Minitest::Test
   end
 
   def test_transform2
-    skip
+    
     inp = ['+-----+', '| * * |', '|     |', '|   * |', '|  * *|',
            '| * * |', '+-----+']
     out = ['+-----+', '|1*2*1|', '|11322|', '| 12*2|', '|12*4*|',
@@ -22,21 +22,21 @@ class MinesweeperTest < Minitest::Test
   end
 
   def test_transform3
-    skip
+    
     inp = ['+-----+', '| * * |', '+-----+']
     out = ['+-----+', '|1*2*1|', '+-----+']
     assert_equal out, Board.transform(inp)
   end
 
   def test_transform4
-    skip
+    
     inp = ['+-+', '|*|', '| |', '|*|', '| |', '| |', '+-+']
     out = ['+-+', '|*|', '|2|', '|*|', '|1|', '| |', '+-+']
     assert_equal out, Board.transform(inp)
   end
 
   def test_transform5
-    skip
+    
     inp = ['+-+', '|*|', '+-+']
     out = ['+-+', '|*|', '+-+']
     assert_equal out, Board.transform(inp)

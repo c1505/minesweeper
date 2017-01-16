@@ -25,9 +25,8 @@ class Board
       end
     end
     @output.pop #shouldn't need this.
-    replace_mines
-    add_sides
-    
+    replace_mines #i am iterating with just about each one of these
+    add_sides # can probably do mutliple things within each iteration
     string_and_join
     remove_zeros
     header_and_footer
@@ -62,8 +61,8 @@ class Board
   end
   
   def header_and_footer
-    @output << "+------+"
-    @output.unshift("+------+")
+    @output << @board[0]
+    @output.unshift(@board[-1])
   end
   
   def trim_board
